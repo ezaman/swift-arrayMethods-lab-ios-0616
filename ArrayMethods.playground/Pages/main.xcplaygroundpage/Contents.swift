@@ -16,10 +16,11 @@
  */
 // write your code here
 
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-
-
-
+for day in daysOfTheWeek {
+    print("Today is \(day)!")
+}
 
 
 /*: question2
@@ -28,8 +29,11 @@
 // write your code here
 
 
+let numDaysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-
+for (index, day) in numDaysOfTheWeek.enumerate() {
+    print("Today is day \(index + 1), \(day)!")
+}
 
 
 
@@ -39,9 +43,13 @@
 // write your code here
 
 
+var emptyArray: [String] = []
 
-
-
+if emptyArray.isEmpty {
+    print("This array is empty, dude")
+}else {
+    print("The array isn't empty, dude")
+}
 
 
 
@@ -50,12 +58,13 @@
  */
 // write your code here
 
+var reverseEmptyArray: [String] = []
 
-
-
-
-
-
+if !reverseEmptyArray.isEmpty {
+    print("This array isn't empty, dude")
+}else {
+    print("The array is empty, dude")
+}
 
 
 /*: question5
@@ -65,9 +74,8 @@
 
 
 
-
-
-
+let countOfDaysInTheWeek = daysOfTheWeek.count
+print("There are \(countOfDaysInTheWeek) days in the week")
 
 
 /*: question6
@@ -75,32 +83,31 @@
  */
 // write your code here
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
-
-
-
-
+print(daysOfTheWeek)
 
 /*: question7
  ### 7. Some people start the week on a Sunday. Remove Sunday from the end of the 'daysOfTheWeek' array and then re-add it to the beginning of the array.
  */
 // write your code here
 
+daysOfTheWeek.removeLast()
 
+daysOfTheWeek.insert("Sunday", atIndex: 0)
 
-
-
-
-
+print(daysOfTheWeek)
 
 /*: question8
  ### 8. Loop through the 'daysofTheWeek' array and change each value to lower case.
  */
 // write your code here
 
-
-
-
+for day in daysOfTheWeek {
+    let lowercaseDay = day.lowercaseString
+    print(lowercaseDay)
+}
 
 
 
@@ -110,9 +117,12 @@
  */
 // write your code here
 
+if daysOfTheWeek.count > 5 {
+    daysOfTheWeek.removeFirst()
+    daysOfTheWeek.removeLast()
+}
 
-
-
+print(daysOfTheWeek)
 
 
 //: Check here on the solution branch for a link to the solutions
